@@ -1,9 +1,127 @@
 @import 'helpers/breakpoints';
 @import 'helpers/variables';
 @import 'helpers/mixins';
-
+@import 'helpers/header';
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+   
 }
+
+
+
+header{
+    width: 100vw;
+    height: 90px;
+    border: 1px solid black;
+
+   
+    
+    .logo{
+        
+       position: fixed;
+       left: 10px;
+       top: 35px;
+       display: block;
+    }
+
+    li {
+        list-style: none;
+        font-size: 17px;
+    }
+
+    #hamburger{
+
+
+        position: absolute;
+        right: 10px;
+        top: 30px;
+
+        .bar{
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: black;
+    
+        }
+    }
+
+    li{
+        color: $grey;
+    }
+
+    .nav-list-section{
+
+        font-weight: 500;
+        height: auto;
+        width: 100%;
+        margin: 100px 0 50px 0;
+        // display change
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-direction: column;
+
+
+   
+        
+
+
+        .list-item{
+            margin: 15px 10px;
+            
+        }
+        
+
+    }
+
+    .nav-button-section{
+        //add @include: flex-centre; when toggled
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        li {
+            height: 40px;
+            width: 150px;
+            margin: 10px 0;
+            // background-color: pink;
+            @include flex-centre;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .register{
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    }
+
+
+
+ 
+
+
+
+
+
+
+
+}
+
+
+.nav-list-section.active{
+    display: flex;
+}
+
+.nav-button-section.active{
+    display: flex;
+}
+
