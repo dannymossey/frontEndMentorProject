@@ -1,0 +1,9 @@
+@import 'helpers/breakpoints';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
